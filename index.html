@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ハンズ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/slider.css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+
+    <link href="js/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="js/slick.css" rel="stylesheet" type="text/css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400&family=Noto+Sans+JP&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap" rel="stylesheet">
+
+
+
+    <meta name="twitter:description"
+        content="A fullscreen, sort of responsive, slideshow animated with Greensocks TweenLite/Tweenmax.   This is work in progress, currently working on how to best p...">
+    <meta property="og:description"
+        content="A fullscreen, sort of responsive, slideshow animated with Greensocks TweenLite/Tweenmax.   This is work in progress, currently working on how to best p...">
+    <meta name="description"
+        content="A fullscreen, sort of responsive, slideshow animated with Greensocks TweenLite/Tweenmax.   This is work in progress, currently working on how to best p...">
+    <meta property="og:title" content="Greensock animated slideshow [wip]">
+
+
+    <meta name="twitter:title" content="Greensock animated slideshow [wip]">
+    <meta name="twitter:description"
+        content="A fullscreen, sort of responsive, slideshow animated with Greensocks TweenLite/Tweenmax.   This is work in progress, currently working on how to best p...">
+    <meta property="og:description"
+        content="A fullscreen, sort of responsive, slideshow animated with Greensocks TweenLite/Tweenmax.   This is work in progress, currently working on how to best p...">
+    <link rel="alternate" type="application/json+oembed"
+        href="https://codepen.io/api/oembed?url=https%3A%2F%2Fcodepen.io%2Faderaaij%2Fpen%2FwKVaKE&format=json"
+        title="Greensock animated slideshow [wip]" />
+    <meta name="description"
+        content="A fullscreen, sort of responsive, slideshow animated with Greensocks TweenLite/Tweenmax.   This is work in progress, currently working on how to best p...">
+
+
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="header__sp__wrap">
+            <div id="js_black_bg" class="is_menu_open"></div>
+            <!-- ハンバーガーメニューBTN -->
+            <div class="js-header__nav-btn l-header__nav-btn">
+                <div class="l-header__nav-btn-inner">
+                    <div class="l-header__nav-btn-line" id="btn_spmenu"><span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="header__sp">
+
+                <div class="header__logo__sp">
+                    <a href="../"><img src="img/header__logo.svg" alt=""></a>
+                </div>
+                <div class="header__icon__sp__wrap">
+                    <div class="search__icon__sp"><a href=""><img src="img/search__icon.svg" alt=""></a></div>
+                    <div class="mail__icon__sp"><a href=""><img src="img/mail__icon.svg" alt=""></a></div>
+                    <div class="cart__icon__sp">
+                        <a href=""><img src="img/cart__icon.svg" alt="">
+                            <div class="cart__num">999</div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="header__sp__nav">
+                <ul class="header__sp__nav__list">
+                    <li>
+                        <div class="header__sp__nav__img"><img src="img/header__sp__nav__img01.svg" alt=""></div>
+                        <div><a href="../">HOME</a></div>
+                    </li>
+                    <li>
+                        <div class="header__sp__nav__img"><img src="img/header__sp__nav__img02.svg" alt=""></div>
+                        <div><a href="../">商品一覧</a></div>
+                    </li>
+                    <li>
+                        <div class="header__sp__nav__img"><img src="img/header__sp__nav__img03.svg" alt=""></div>
+                        <div><a href="../">お知らせ</a></div>
+                    </li>
+                    <li>
+                        <div class="header__sp__nav__img"><img src="img/header__sp__nav__img04.svg" alt=""></div>
+                        <div><a href="../">よくある質問</a></div>
+                    </li>
+                    <li>
+                        <div class="header__sp__nav__img"><img src="img/header__sp__nav__img05.svg" alt=""></div>
+                        <div><a href="../">ご利用ガイド</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- pc -->
+        <div class="header__pc__wrap">
+            <div class="header__pc__top"></div>
+            <div class="header__pc">
+                <div class="header__pc__logo"><a href="../"><img src="img/header__logo.svg" alt=""></a></div>
+                <ul class="header__pc__nav">
+                    <li class="active"><a href="../">
+                            <div class="header__pc__nav__img"><img src="img/header__pc__nav__img01.svg" alt=""></div>
+                            HOME
+                        </a></li>
+                    <li><a href="../business.html">
+                            <div class="header__pc__nav__img"><img src="img/header__pc__nav__img02.svg" alt=""></div>
+                            商品一覧
+                        </a></li>
+                    <li><a href="../store-list.html">
+                            <div class="header__pc__nav__img"><img src="img/header__pc__nav__img03.svg" alt=""></div>
+                            お知らせ
+                        </a></li>
+                    <li><a href="../news.html">
+                            <div class="header__pc__nav__img"><img src="img/header__pc__nav__img04.svg" alt=""></div>
+                            よくある質問
+                        </a></li>
+                    <li><a href="../company.html">
+                            <div class="header__pc__nav__img"><img src="img/header__pc__nav__img05.svg" alt=""></div>
+                            ご利用ガイド
+                        </a></li>
+                </ul>
+                <!-- <div class="header__pc__icon">
+                    <div class="header__pc__mail__icon"><a href="../contact.html"><img src="img/mail__icon.svg" alt=""></a></div>
+                    <div class="header__pc__online__icon"><a href=""><img src="img/header__pc__online__icon.svg" alt=""></a></div>
+                </div> -->
+
+                <div class="header__pc__icon">
+                    <div class="search__pc">
+                        <!-- 検索 -->
+                        <form id="form4" action="自分のサイトURL" method="get" autocomplete="off">
+                            <input id="sbox4" id="s" name="s" type="text" placeholder="" />
+                            <button id="sbtn4" type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="header__pc__mail__icon"><a href=""><img src="img/mail__icon.svg" alt=""></a></div>
+                    <div class="header__pc__online__icon">
+                        <a href=""><img src="img/cart__icon.svg" alt="">
+                            <div class="cart__num">999</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- mvスライダー -->
+    <!--  div.slideShow
+  ul.slideShow__container
+    li.slideShow__slide
+      figure.slideShow__image(style='background-image:url(https://c2.staticflickr.com/8/7668/17188829572_53e8c45aec_h.jpg);')
+      .slideShow__titleWrap
+        h2.slideShow__slideTitle Barichara
+        .slideShow__slideSubTitle La Abuelita
+    li.slideShow__slide
+      figure.slideShow__image(style='background-image:url(https://c2.staticflickr.com/8/7595/16575563694_5259f740ed_k.jpg);')
+      .slideShow__titleWrap
+        h2.slideShow__slideTitle Tayrona
+        .slideShow__slideSubTitle La playa
+    li.slideShow__slide
+      figure.slideShow__image(style='background-image:url(https://c2.staticflickr.com/8/7723/17172064766_edf36b7b51_k.jpg);')
+      .slideShow__titleWrap
+        h2.slideShow__slideTitle Santa Marta
+        .slideShow__slideSubTitle El Burro
+    li.slideShow__slide
+      figure.slideShow__image(style='background-image:url(https://c1.staticflickr.com/9/8714/17164716126_5494165d77_k.jpg);')
+      .slideShow__titleWrap
+        h2.slideShow__slideTitle Salento
+        .slideShow__slideSubTitle La vista
+      
+  .slideShow__next
+    i.fa.fa-angle-right
+  .slideShow__prev
+    i.fa.fa-angle-left
+ -->
+    <!--  -->
+    <!-- <div class="slideShow">
+        <ul class="slideShow__container">
+            <li class="slideShow__slide">
+                <figure class="slideShow__image" style='background-image:url(img/top/mv__slider__img01.png);'></figure>
+                <div class="slideShow__titleWrap">
+                    <h2 class="slideShow__slideTitle"></h2>
+                    <div class="slideShow__slideSubTitle"></div>
+                </div>
+            </li>
+            <li class="slideShow__slide">
+                <figure class="slideShow__image" style='background-image:url(img/top/mv__slider__img01.png);'></figure>
+                <div class="slideShow__titleWrap">
+                    <h2 class="slideShow__slideTitle"></h2>
+                    <div class="slideShow__slideSubTitle"></div>
+                </div>
+            </li>
+        </ul>
+        <div class="slideShow__next"><i class="fa fa-angle-right"></i></div>
+        <div class="slideShow__prev"><i class="fa fa-angle-left"></i></div>
+
+    </div> -->
+
+
+
+
+    <section class="pickup">
+        <h2 class="pickup__ttl">
+            <img src="img/top/pickup__ttl.svg" alt="">
+            <div class="subttl">おすすめ商品</div>
+        </h2>
+        <div class="slider__list__wrap">
+            <ul class="slider__list">
+                <li>
+                    <div class="slider__list__img"><img src="img/top/slider__list__img.png" alt=""></div>
+                    <div class="slider__list__txt__area">
+                        <div class="slider__list__txt">テキストテキストテキストテキスト</div>
+                        <div class="slider__list__plice"><span>¥0,000</span>（税込）</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider__list__img"><img src="img/top/slider__list__img.png" alt=""></div>
+                    <div class="slider__list__txt__area">
+                        <div class="slider__list__txt">テキストテキストテキストテキスト</div>
+                        <div class="slider__list__plice"><span>¥0,000</span>（税込）</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider__list__img"><img src="img/top/slider__list__img.png" alt=""></div>
+                    <div class="slider__list__txt__area">
+                        <div class="slider__list__txt">テキストテキストテキストテキスト</div>
+                        <div class="slider__list__plice"><span>¥0,000</span>（税込）</div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="pickup__img-txt__wrap">
+            <div class="pickup__img-txt">
+                <div class="pickup__img"><img src="img/top/pickup__img.png" alt=""></div>
+                <div class="pickup__txt__area__wrap">
+                    <div class="pickup__txt__area">
+                        <div class="pickup__txt__area__ttl">ボリューム満点のお肉を<br>
+                            自宅でお楽しみいただけます。</div>
+                        <div class="pickup__txt__area__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                        </div>
+                    </div>
+                    <div class="pickup__send__btn__wrap">
+                        <a href="">
+                            <div class="pickup__send__btn">詳しく見る</div>
+                            <div class="pickup__send__btn__arrow"><img src="img/top/pickup__send__btn__arrow.svg"
+                                    alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="productlist">
+        <h2 class="productlist__ttl">
+            <img src="img/top/productlist__ttl.svg" alt="">
+            <div class="subttl">商品一覧</div>
+        </h2>
+        <div class="tab__wrap">
+            <ul class="tab__panel__list">
+                <li>すべて</li>
+                <li>ステーキ</li>
+                <li>ハンバーグ</li>
+                <li>ドレッシング</li>
+            </ul>
+            <div class="productlist__img-txt__list__wrap">
+                <ul class="productlist__img-txt__list">
+                    <li>
+                        <div class="productlist__img__wrap">
+                            <div class="productlist__img"><img src="img/image__img.png" alt=""></div>
+                        </div>
+                        <div class="productlist__txt__area">
+                            <div class="productlist__txt">テキストテキストテキストテキストテキストテキスト</div>
+                            <div class="productlist__plice"><span>¥0,000</span>（税込）</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productlist__img__wrap">
+                            <div class="productlist__img"><img src="img/image__img.png" alt=""></div>
+                        </div>
+                        <div class="productlist__txt__area">
+                            <div class="productlist__txt">テキストテキストテキストテキストテキストテキスト</div>
+                            <div class="productlist__plice"><span>¥0,000</span>（税込）</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productlist__img__wrap">
+                            <div class="productlist__img"><img src="img/image__img.png" alt=""></div>
+                        </div>
+                        <div class="productlist__txt__area">
+                            <div class="productlist__txt">テキストテキストテキストテキストテキストテキスト</div>
+                            <div class="productlist__plice"><span>¥0,000</span>（税込）</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productlist__img__wrap">
+                            <div class="productlist__img"><img src="img/image__img.png" alt=""></div>
+                        </div>
+                        <div class="productlist__txt__area">
+                            <div class="productlist__txt">テキストテキストテキストテキストテキストテキスト</div>
+                            <div class="productlist__plice"><span>¥0,000</span>（税込）</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productlist__img__wrap">
+                            <div class="productlist__img"><img src="img/image__img.png" alt=""></div>
+                        </div>
+                        <div class="productlist__txt__area">
+                            <div class="productlist__txt">テキストテキストテキストテキストテキストテキスト</div>
+                            <div class="productlist__plice"><span>¥0,000</span>（税込）</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productlist__img__wrap">
+                            <div class="productlist__img"><img src="img/image__img.png" alt=""></div>
+                        </div>
+                        <div class="productlist__txt__area">
+                            <div class="productlist__txt">テキストテキストテキストテキストテキストテキスト</div>
+                            <div class="productlist__plice"><span>¥0,000</span>（税込）</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productlist__img__wrap">
+                            <div class="productlist__img"><img src="img/image__img.png" alt=""></div>
+                        </div>
+                        <div class="productlist__txt__area">
+                            <div class="productlist__txt">テキストテキストテキストテキストテキストテキスト</div>
+                            <div class="productlist__plice"><span>¥0,000</span>（税込）</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productlist__img__wrap">
+                            <div class="productlist__img"><img src="img/image__img.png" alt=""></div>
+                        </div>
+                        <div class="productlist__txt__area">
+                            <div class="productlist__txt">テキストテキストテキストテキストテキストテキスト</div>
+                            <div class="productlist__plice"><span>¥0,000</span>（税込）</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productlist__img__wrap">
+                            <div class="productlist__img"><img src="img/image__img.png" alt=""></div>
+                        </div>
+                        <div class="productlist__txt__area">
+                            <div class="productlist__txt">テキストテキストテキストテキストテキストテキスト</div>
+                            <div class="productlist__plice"><span>¥0,000</span>（税込）</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productlist__img__wrap">
+                            <div class="productlist__img"><img src="img/image__img.png" alt=""></div>
+                        </div>
+                        <div class="productlist__txt__area">
+                            <div class="productlist__txt">テキストテキストテキストテキストテキストテキスト</div>
+                            <div class="productlist__plice"><span>¥0,000</span>（税込）</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productlist__img__wrap">
+                            <div class="productlist__img"><img src="img/image__img.png" alt=""></div>
+                        </div>
+                        <div class="productlist__txt__area">
+                            <div class="productlist__txt">テキストテキストテキストテキストテキストテキスト</div>
+                            <div class="productlist__plice"><span>¥0,000</span>（税込）</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productlist__img__wrap">
+                            <div class="productlist__img"><img src="img/image__img.png" alt=""></div>
+                        </div>
+                        <div class="productlist__txt__area">
+                            <div class="productlist__txt">テキストテキストテキストテキストテキストテキスト</div>
+                            <div class="productlist__plice"><span>¥0,000</span>（税込）</div>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+            </div>
+            <div class="productlist__btn__wrap common__btn__wrap">
+                <a href="">
+                    <div class="productlist__btn common__btn">一覧を見る</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ranking">
+        <h2 class="ranking__ttl">
+            <img src="img/top/ranking__ttl-sp.svg" alt="" class="switch">
+            <div class="subttl">人気ランキング</div>
+        </h2>
+        <div class="ranking__list__wrap">
+            <ul class="ranking__list">
+                <li>
+                    <div class="rainbow__img"><img src="img/top/rainbow__img01.svg" alt=""></div>
+                    <div class="ranking__img">
+                        <img src="img/image__img.png" alt="">
+                    </div>
+                    
+                    <div class="ranking__txt__area">
+                        <div class="ranking__txt">テキストテキストテキストテキストテキストテキスト</div>
+                        <div class="ranking__plice"><span>¥0,000</span>（税込）</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="rainbow__img"><img src="img/top/rainbow__img01.svg" alt=""></div>
+                    <div class="ranking__img">
+                        <img src="img/image__img.png" alt="">
+                    </div>
+                    <div class="ranking__txt__area">
+                        <div class="ranking__txt">テキストテキストテキストテキストテキストテキスト</div>
+                        <div class="ranking__plice"><span>¥0,000</span>（税込）</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="rainbow__img"><img src="img/top/rainbow__img01.svg" alt=""></div>
+                    <div class="ranking__img">
+                        <img src="img/image__img.png" alt="">
+                    </div>
+                    <div class="ranking__txt__area">
+                        <div class="ranking__txt">テキストテキストテキストテキストテキストテキスト</div>
+                        <div class="ranking__plice"><span>¥0,000</span>（税込）</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="rainbow__img"><img src="img/top/rainbow__img01.svg" alt=""></div>
+                    <div class="ranking__img">
+                        <img src="img/image__img.png" alt="">
+                    </div>
+                    <div class="ranking__txt__area">
+                        <div class="ranking__txt">テキストテキストテキストテキストテキストテキスト</div>
+                        <div class="ranking__plice"><span>¥0,000</span>（税込）</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="common__shoppingguide">
+        <h2 class="common__shoppingguide__ttl">
+            <img src="img/shoppingguide__ttl.svg" alt="">
+            <div class="subttl">ご利用ガイド</div>
+        </h2>
+        <div class="common__shoppingguide__img"><img src="img/shoppingguide__img-sp.svg" alt="" class="switch"></div>
+        <div class="common__shoppingguide__btn__wrap common__btn__wrap">
+            <a href="">
+                <div class="common__shoppingguide__btn common__btn">詳しく見る</div>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="common__news">
+        <h2 class="common__news__ttl">
+            <img src="img/common__news__ttl.svg" alt="">
+            <div class="subttl">お知らせ</div>
+        </h2>
+        <div class="slider__list02__wrap">
+            <ul class="slider__list02">
+                <li>
+                    <div class="slider__list02__img"><img src="img/slider__list02__img01.png" alt=""></div>
+                    <div class="slider__list02__txt__area">
+                        <time>2022.07.02</time>
+                        <div class="slider__list02__txt">奇跡の1マイル店リニューアルオープン</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider__list02__img"><img src="img/slider__list02__img03.png" alt=""></div>
+                    <div class="slider__list02__txt__area">
+                        <time>2022.00.00</time>
+                        <div class="slider__list02__txt">毎月28日に抽選でランチ無料券をプレゼント</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider__list02__img"><img src="img/slider__list02__img02.png" alt=""></div>
+                    <div class="slider__list02__txt__area">
+                        <time>2022.00.00</time>
+                        <div class="slider__list02__txt">オンラインショップオープンしました。</div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer__wrap">
+            <div class="footer__logo"><a href=""><img src="img/footer__logo.svg" alt=""></a></div>
+            <ul class="footer__nav__list">
+                <li><a href="">● HOME</a></li>
+                <li><a href="">● 商品一覧</a></li>
+                <li><a href="">● お知らせ</a></li>
+                <li><a href="">● よくある質問</a></li>
+                <li><a href="">● ご利用ガイド</a></li>
+                <li><a href="">● 店舗一覧</a></li>
+                <li><a href="">● 会社概要</a></li>
+                <li><a href="">● お問い合わせ</a></li>
+            </ul>
+        </div>
+        <div class="footer__nav__u-sns__wrap">
+            <div class="footer__nav__u__list">
+                <li><a href="">個人情報の取り扱いについて</a></li>
+                <li><a href="">特定商取引法に関する表示</a></li>
+                <li><a href="">公式ホームページ</a></li>
+            </div>
+            <ul class="footer__sns__list">
+                <li><a href=""><img src="img/footer__sns01.svg" alt=""></a></li>
+                <li><a href=""><img src="img/footer__sns02.svg" alt=""></a></li>
+                <li><a href=""><img src="img/footer__sns03.svg" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="cw">STEAK HAN'S Online Shop All Right Reserved.</div>
+        <div class="back-to-top__btn"><a href="#"><img src="img/back-to-top__btn.png" alt=""></a></div>
+    </footer>
+
+
+
+    <script>
+        // Debounce
+        function debounce(a, b, c) { var d; return function () { var e = this, f = arguments; clearTimeout(d), d = setTimeout(function () { d = null, c || a.apply(e, f) }, b), c && !d && a.apply(e, f) } }
+
+        var SlideShow = function () {
+
+            var
+                slider,
+                slide,
+                nextButton,
+                prevButton,
+                slideAmount,
+                sliderWidth,
+                title,
+                subTitle,
+                clickCounter,
+                slideCounter;
+
+            var _init = function () {
+                slider = document.getElementsByClassName('slideShow__container')[0];
+                slide = document.getElementsByClassName('slideShow__slide');
+                slideAmount = slide.length;
+                nextButton = document.getElementsByClassName('slideShow__next')[0];
+                prevButton = document.getElementsByClassName('slideShow__prev')[0];
+                title = document.getElementsByClassName('slideShow__slideTitle');
+                subTitle = document.getElementsByClassName('slideShow__slideSubTitle');
+                sliderWidth = parseInt(getComputedStyle(slider).width);
+                clickCounter = 0;
+                slideCounter = 0;
+
+                _eventHandlers();
+                _navButtons();
+                _animateSlideIn(slideCounter);
+            }
+
+            var _eventHandlers = function () {
+                nextButton.addEventListener('click', _slideNext, false);
+                prevButton.addEventListener('click', _slidePrev, false);
+                window.addEventListener('resize', _resize, false);
+            }
+
+            var _navButtons = function () {
+                if (clickCounter === 0) {
+                    prevButton.classList.add('is-inactive')
+                } else {
+                    prevButton.classList.remove('is-inactive')
+                }
+            }
+
+            var _slideNext = function () {
+                clickCounter++;
+                slideCounter = clickCounter - 1;
+                if (clickCounter >= slideAmount) {
+                    clickCounter = 0;
+                    slideCounter = slideAmount - 1;
+                }
+                var tl = new TimelineLite();
+                tl
+                    .add(_animateSlideOut(slideCounter))
+                    .to(slider, .9, { x: -clickCounter * sliderWidth, ease: Power2.easeOut })
+                    .add(_animateSlideIn(clickCounter))
+                _navButtons();
+            }
+
+            var _slidePrev = function () {
+                if (clickCounter > 0) {
+                    clickCounter--;
+
+                    // _getPreviousSlide(clickCounter +1)
+                    var tl = new TimelineLite();
+                    tl
+                        .add(_animateSlideOut(clickCounter + 1))
+                        .to(slider, .9, { x: '+=' + sliderWidth, ease: Power2.easeOut }, '-=0.2')
+                        .add(_animateSlideIn(clickCounter));
+
+                }
+                _navButtons();
+            }
+
+            var _animateSlideIn = function (index) {
+                var currentSlide = slide[index];
+                var title = currentSlide.children[1].children[0];
+                var subTitle = currentSlide.children[1].children[1];
+                var image = currentSlide.children[0];
+
+                var splitTitle = new SplitText(title);
+                var revertTitle = function () {
+                    splitTitle.revert();
+                }
+
+                TweenLite.set(title, { perspective: 400 });
+
+                var tl = new TimelineLite({ onComplete: revertTitle });
+                tl
+                    .set(title, { opacity: 1 })
+                    .staggerFrom(splitTitle.chars, 0.8, {
+                        opacity: 0,
+                        scale: 0,
+                        y: 80,
+                        rotationX: 180,
+                        transformOrigin: "0% 50% -50",
+                        ease: Back.easeOut
+                    }, 0.03)
+                    .fromTo(subTitle, 0.6, { y: 50, opacity: 0 }, { y: 0, opacity: 1 }, '-=0.3')
+                    .to(image, 0.4, { scale: 1, ease: Power2.easeOut }, '-=0.6')
+                return tl;
+            }
+
+            var _animateSlideOut = function (index) {
+                var currentSlide = slide[index];
+                var title = currentSlide.children[1].children[0];
+                var subTitle = currentSlide.children[1].children[1];
+                var image = currentSlide.children[0];
+
+                var tl = new TimelineLite();
+                tl
+                    .to(title, 0.3, { opacity: 0 })
+                    .to(subTitle, 0.3, { y: 50, opacity: 0 }, '-=0.3')
+                    .to(image, 0.4, { scale: 0.8, ease: Power2.easeIn }, '-=0.3')
+                return tl;
+            }
+
+            var _resize = debounce(function () {
+                sliderWidth = parseInt(getComputedStyle(slider).width);
+                sliderOffset = sliderWidth * clickCounter;
+                slider.style.transform = 'matrix(1, 0, 0, 1, -' + sliderOffset + ', 0)'
+            }, 50)
+
+            return {
+                init: _init
+            }
+
+        }();
+
+        SlideShow.init();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+
+
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+
+
+
+</body>
+
+</html>

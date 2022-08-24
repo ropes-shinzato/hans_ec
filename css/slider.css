@@ -1,0 +1,112 @@
+
+
+@media screen and (min-width:768px) {
+.slider__list__wrap .slick-slider{
+    
+    max-width: 758px;
+    margin: 0 auto;
+}
+
+.slider__list__wrap .slick-arrow:before{
+    content:""!important;
+    width: 100%!important;
+    height: 100%!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100000000 !important;
+  }
+
+  .slider__list__wrap .slick-next:before{
+    background: url(../img/top/arrow_r.svg)!important;
+    background-size: contain!important;
+    width:30.4px !important;
+    height:117.7px !important;
+    background-repeat: no-repeat  !important;
+    
+  }
+
+  .slider__list__wrap .slick-prev:before{
+    background: url(../img/top/arrow_l.svg)!important;
+    background-size: contain!important;
+    width:30.4px !important;
+    height:117.7px !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .slider__list__wrap .slick-prev {
+    left: -50px  !important;
+}
+  .slider__list__wrap .slick-next {
+    right: -50px  !important;
+}
+.slider__list__wrap .slick-next, .slick-prev{
+    top:30% !important;
+}
+
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden; 
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+
+.ranking__list .slick-slider{
+    
+    max-width: 758px;
+    margin: 0 auto;
+}
+
+.ranking__list .slick-arrow:before{
+    content:""!important;
+    width: 100%!important;
+    height: 100%!important;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    z-index: 100000000 !important;
+  }
+
+  .ranking__list .slick-next:before{
+    background: url(../img/top/arrow_r02.svg)!important;
+    background-size: contain!important;
+    width:30.4px !important;
+    height:117.7px !important;
+    background-repeat: no-repeat  !important;
+    
+  }
+
+  .ranking__list .slick-prev:before{
+    background: url(../img/top/arrow_l02.svg)!important;
+    background-size: contain!important;
+    width:30.4px !important;
+    height:117.7px !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .ranking__list .slick-prev {
+    left: -50px  !important;
+}
+.ranking__list .slick-next {
+    right: -50px  !important;
+}
+.ranking__list .slick-next, .slick-prev{
+    top:30% !important;
+}
+
+
+.ranking__list .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden; 
+    margin: 0;
+    padding: 0;
+    
+}
+}
