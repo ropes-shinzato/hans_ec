@@ -673,4 +673,34 @@ body {
         max-width: 900px;
         margin-bottom:43px;
     }
+
+    .common__news {
+        background-color: #b60005;
+        padding-top: 46.5px ;
+        padding-bottom:55px;
+    }
+
+    .common__news__ttl {
+        width: 154px;
+        margin-bottom: 39px;
+    }
+
+
+    .slider__list02__wrap {
+        max-width:900px;
+        margin: 0 auto;
+        width:84%;
+    }
+
+    .slider__list02 {
+        max-width: 790px;
+        margin: 0 auto;
+    }
+
+    .slider__list02 li {
+        margin: 0 0.6%;
+        width:30%
+    }
+
+    
 }
