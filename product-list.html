@@ -8,7 +8,7 @@
     <title>ハンズ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/product-list.css">
     <link rel="stylesheet" href="css/slider.css">
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -24,6 +24,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/eea364082e.js" crossorigin="anonymous"></script>
 
 
 
@@ -126,11 +128,11 @@
             <div class="header__pc">
                 <div class="header__pc__logo"><a href="../"><img src="img/header__logo.svg" alt=""></a></div>
                 <ul class="header__pc__nav">
-                    <li class="active"><a href="../">
+                    <li><a href="../">
                             <div class="header__pc__nav__img"><img src="img/header__pc__nav__img01.svg" alt=""></div>
                             HOME
                         </a></li>
-                    <li><a href="../product-list.html">
+                    <li class="active"><a href="../product-list.html">
                             <div class="header__pc__nav__img"><img src="img/header__pc__nav__img02.svg" alt=""></div>
                             商品一覧
                         </a></li>
@@ -172,120 +174,22 @@
         </div>
     </header>
 
-    <!-- mvスライダー -->
-    <!--  div.slideShow
-  ul.slideShow__container
-    li.slideShow__slide
-      figure.slideShow__image(style='background-image:url(https://c2.staticflickr.com/8/7668/17188829572_53e8c45aec_h.jpg);')
-      .slideShow__titleWrap
-        h2.slideShow__slideTitle Barichara
-        .slideShow__slideSubTitle La Abuelita
-    li.slideShow__slide
-      figure.slideShow__image(style='background-image:url(https://c2.staticflickr.com/8/7595/16575563694_5259f740ed_k.jpg);')
-      .slideShow__titleWrap
-        h2.slideShow__slideTitle Tayrona
-        .slideShow__slideSubTitle La playa
-    li.slideShow__slide
-      figure.slideShow__image(style='background-image:url(https://c2.staticflickr.com/8/7723/17172064766_edf36b7b51_k.jpg);')
-      .slideShow__titleWrap
-        h2.slideShow__slideTitle Santa Marta
-        .slideShow__slideSubTitle El Burro
-    li.slideShow__slide
-      figure.slideShow__image(style='background-image:url(https://c1.staticflickr.com/9/8714/17164716126_5494165d77_k.jpg);')
-      .slideShow__titleWrap
-        h2.slideShow__slideTitle Salento
-        .slideShow__slideSubTitle La vista
-      
-  .slideShow__next
-    i.fa.fa-angle-right
-  .slideShow__prev
-    i.fa.fa-angle-left
- -->
-    <!--  -->
-    <!-- <div class="slideShow">
-        <ul class="slideShow__container">
-            <li class="slideShow__slide">
-                <figure class="slideShow__image" style='background-image:url(img/top/mv__slider__img01.png);'></figure>
-                <div class="slideShow__titleWrap">
-                    <h2 class="slideShow__slideTitle"></h2>
-                    <div class="slideShow__slideSubTitle"></div>
-                </div>
-            </li>
-            <li class="slideShow__slide">
-                <figure class="slideShow__image" style='background-image:url(img/top/mv__slider__img01.png);'></figure>
-                <div class="slideShow__titleWrap">
-                    <h2 class="slideShow__slideTitle"></h2>
-                    <div class="slideShow__slideSubTitle"></div>
-                </div>
-            </li>
-        </ul>
-        <div class="slideShow__next"><i class="fa fa-angle-right"></i></div>
-        <div class="slideShow__prev"><i class="fa fa-angle-left"></i></div>
-
-    </div> -->
-
-
-
-
-    <section class="pickup">
-        <h2 class="pickup__ttl">
-            <img src="img/top/pickup__ttl.svg" alt="">
-            <div class="subttl">おすすめ商品</div>
+    <!-- 下層ページ共通部分 -->
+    <section class="underlayer__common">
+        <h2 class="underlayer__common__ttl product-list__ttl">
+            <img src="img/product-list/product-list__ttl.svg" alt="">
+            <div class="underlayer__common__subttl">商品一覧</div>
         </h2>
-        <div class="slider__list__wrap">
-            <ul class="slider__list">
-                <li>
-                    <div class="slider__list__img"><img src="img/top/slider__list__img.png" alt=""></div>
-                    <div class="slider__list__txt__area">
-                        <div class="slider__list__txt">テキストテキストテキストテキスト</div>
-                        <div class="slider__list__plice"><span>¥0,000</span>（税込）</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="slider__list__img"><img src="img/top/slider__list__img.png" alt=""></div>
-                    <div class="slider__list__txt__area">
-                        <div class="slider__list__txt">テキストテキストテキストテキスト</div>
-                        <div class="slider__list__plice"><span>¥0,000</span>（税込）</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="slider__list__img"><img src="img/top/slider__list__img.png" alt=""></div>
-                    <div class="slider__list__txt__area">
-                        <div class="slider__list__txt">テキストテキストテキストテキスト</div>
-                        <div class="slider__list__plice"><span>¥0,000</span>（税込）</div>
-                    </div>
-                </li>
-
-            </ul>
-        </div>
-        <div class="pickup__img-txt__wrap">
-            <div class="pickup__img-txt">
-                <div class="pickup__img"><img src="img/top/pickup__img.png" alt=""></div>
-                <div class="pickup__txt__area__wrap">
-                    <div class="pickup__txt__area">
-                        <div class="pickup__txt__area__ttl">ボリューム満点のお肉を<br>
-                            自宅でお楽しみいただけます。</div>
-                        <div class="pickup__txt__area__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                        </div>
-                    </div>
-                    <div class="pickup__send__btn__wrap">
-                        <a href="">
-                            <div class="pickup__send__btn">詳しく見る</div>
-                            <div class="pickup__send__btn__arrow"><img src="img/top/pickup__send__btn__arrow.svg"
-                                    alt="">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
+    <div class="top__send">
+        <div class="home__send"><a href="../">HOME</a></div>
+        <div class="send__arrow"><img src="img/send__arrow.svg" alt="" class="switch"></div>
+        <div class="send02">商品一覧</div>
+    </div>
+
 
     <section class="productlist">
-        <h2 class="productlist__ttl">
-            <img src="img/top/productlist__ttl.svg" alt="">
-            <div class="subttl">商品一覧</div>
-        </h2>
+        
         <div class="tab__wrap">
             <ul class="tab__panel__list">
                 <li>すべて</li>
@@ -409,64 +313,11 @@
             </div>
             <div class="productlist__btn__wrap common__btn__wrap">
                 <a href="">
-                    <div class="productlist__btn common__btn">一覧を見る</div>
+                    <div class="productlist__btn common__btn">もっと見る</div>
                 </a>
             </div>
         </div>
     </section>
-
-    <section class="ranking">
-        <h2 class="ranking__ttl">
-            <img src="img/top/ranking__ttl-sp.svg" alt="" class="switch">
-            <div class="subttl">人気ランキング</div>
-        </h2>
-        <div class="ranking__list__wrap">
-            <ul class="ranking__list">
-                <li>
-                    <div class="rainbow__img"><img src="img/top/rainbow__img01.svg" alt=""></div>
-                    <div class="ranking__img">
-                        <img src="img/image__img.png" alt="">
-                    </div>
-
-                    <div class="ranking__txt__area">
-                        <div class="ranking__txt">テキストテキストテキストテキストテキストテキスト</div>
-                        <div class="ranking__plice"><span>¥0,000</span>（税込）</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="rainbow__img"><img src="img/top/rainbow__img01.svg" alt=""></div>
-                    <div class="ranking__img">
-                        <img src="img/image__img.png" alt="">
-                    </div>
-                    <div class="ranking__txt__area">
-                        <div class="ranking__txt">テキストテキストテキストテキストテキストテキスト</div>
-                        <div class="ranking__plice"><span>¥0,000</span>（税込）</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="rainbow__img"><img src="img/top/rainbow__img01.svg" alt=""></div>
-                    <div class="ranking__img">
-                        <img src="img/image__img.png" alt="">
-                    </div>
-                    <div class="ranking__txt__area">
-                        <div class="ranking__txt">テキストテキストテキストテキストテキストテキスト</div>
-                        <div class="ranking__plice"><span>¥0,000</span>（税込）</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="rainbow__img"><img src="img/top/rainbow__img01.svg" alt=""></div>
-                    <div class="ranking__img">
-                        <img src="img/image__img.png" alt="">
-                    </div>
-                    <div class="ranking__txt__area">
-                        <div class="ranking__txt">テキストテキストテキストテキストテキストテキスト</div>
-                        <div class="ranking__plice"><span>¥0,000</span>（税込）</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
     <section class="common__shoppingguide">
         <h2 class="common__shoppingguide__ttl">
             <img src="img/shoppingguide__ttl.svg" alt="">
@@ -520,6 +371,8 @@
             </ul>
         </div>
     </section>
+
+
 
     <footer>
         <div class="footer__wrap">

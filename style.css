@@ -4,7 +4,7 @@ body {
 
 .header {}
 
-.header__pc__wrap{
+.header__pc__wrap {
     display: none;
 }
 
@@ -136,6 +136,136 @@ body {
 
 }
 
+/* 検索パネル */
+/*==検索窓背景のエリア*/
+#search-wrap {
+    position: fixed;
+    /*固定配置にして*/
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /*最背面に設定*/
+    opacity: 0;
+    /*透過を0に*/
+    transition: all 0.4s;
+    /*transitionを使ってスムースに現れる*/
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+/*ボタンクリック後、JSで#search-wrapに panelactive クラスが付与された後の見た目*/
+#search-wrap.panelactive {
+    opacity: 1;
+    /*不透明に変更*/
+    z-index: 3;
+    /*全面に出現*/
+    background: #333;
+    /*中の要素を天地中央揃えにする設定*/
+    display: flex;
+    justify-content: center;
+    margin-top: 73.9px;
+}
+
+/*==検索窓のエリア*/
+
+#search-wrap .search-area {
+    display: none;
+    /*検索窓のエリアは、はじめ非表示*/
+}
+
+/*ボタンクリック後、JSで#search-wrapに panelactive クラスが付与された後*/
+#search-wrap.panelactive .search-area {
+    display: block;
+    /*検索窓エリアを表示*/
+    width: 85%;
+    position: relative;
+}
+
+/*==検索フォームの設定*/
+
+#search-wrap form {
+    position: relative;
+    height: 66px;
+    top: 10px;
+}
+
+/*==テキスト入力とボタンinput共通設定*/
+#search-wrap input {
+    -webkit-appearance: none;
+    /*SafariやChromeのデフォルトの設定を無効*/
+    outline: none;
+    cursor: pointer;
+    /*カーソルを指マークに*/
+    color: black;
+}
+
+/*テキスト入力input設定*/
+#search-wrap input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    transition: all 0.5s;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+}
+
+/* #search-wrap input[type="text"]:focus {
+	background:#444;
+} */
+
+/*ボタンinput設定*/
+#search-wrap input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    /* background:url("../img/header__icon__img01.svg") no-repeat 15px center; */
+    /*虫眼鏡アイコンを背景に表示*/
+    background-size: 25px 25px;
+    width: 60px;
+    height: 60px;
+    display: none;
+}
+
+/*=======　閉じるための×ボタン　========*/
+.close-btn {
+    position: absolute;
+    top: -8px;
+    right: 4px;
+    z-index: 2;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+}
+
+.close-btn span {
+    display: inline-block;
+    position: absolute;
+    left: 14px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: black;
+}
+
+/*×マーク*/
+.close-btn span:nth-of-type(1) {
+    top: 21px;
+    left: 16px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 50%;
+}
+
+.close-btn span:nth-of-type(2) {
+    top: 33px;
+    left: 16px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 50%;
+}
+
+/*  */
+
+
+
 
 
 /* ヘッダーsp ハンバーガーメニューBTN */
@@ -257,76 +387,83 @@ body.is_menu_open #js_black_bg {
 }
 
 /* フッター */
-footer{
+footer {
     position: relative;
-    
+
 }
-footer a{
-    color: black;text-decoration: none;
+
+footer a {
+    color: black;
+    text-decoration: none;
 }
+
 .footer__wrap {
-    padding-top:30px;
+    padding-top: 30px;
 }
 
 .footer__logo {
-    width:152px;
+    width: 152px;
     margin: 0 auto;
 }
 
 .footer__nav__list {
     display: flex;
     flex-wrap: wrap;
-    width:271.6px;
-    margin:0 auto;
+    width: 271.6px;
+    margin: 0 auto;
     margin-top: 33px;
-    margin-bottom:41.5px;
+    margin-bottom: 41.5px;
 }
 
-.footer__nav__list li{
+.footer__nav__list li {
     width: 50%;
 }
 
-.footer__nav__list li:not(:nth-last-child(-n+2)){
-    margin-bottom:25px;
+.footer__nav__list li:not(:nth-last-child(-n+2)) {
+    margin-bottom: 25px;
 }
 
 .footer__nav__u-sns__wrap {
-    text-align:center;
+    text-align: center;
 }
 
 .footer__nav__u__list {
     display: inline-block;
     text-align: left;
 }
-.footer__nav__u__list li{
+
+.footer__nav__u__list li {
     list-style: none;
     margin-right: 117px;
-    
+
 }
 
-.footer__nav__u__list li:not(:last-child){
+.footer__nav__u__list li:not(:last-child) {
     margin-bottom: 14px;
 }
 
 .footer__sns__list {
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
     margin-top: 25px;
     margin-bottom: 21px;
 }
-.footer__sns__list li{
-width:33px;
+
+.footer__sns__list li {
+    width: 33px;
 }
-.footer__sns__list li:not(:last-child){
+
+.footer__sns__list li:not(:last-child) {
     margin-right: 11px;
 }
-.cw{
-    font-size:12px;
-    text-align:center;
+
+.cw {
+    font-size: 12px;
+    text-align: center;
     margin-bottom: 14px;
 }
 
-.back-to-top__btn{
+.back-to-top__btn {
     position: absolute;
     width: 47px;
     top: -24px;
@@ -338,6 +475,12 @@ width:33px;
 
 
 /* 共通 */
+.subttl {
+    text-align: center;
+    color: #666666;
+    margin-top: 16px;
+
+}
 .common__btn__wrap {
     width: 185.4px;
     margin: 0 auto;
@@ -436,6 +579,45 @@ width:33px;
     margin-top: 5px;
 }
 
+.underlayer__common {
+    background-color: #b60005;
+    padding-top:26px;
+    padding-bottom:21px;
+}
+
+.underlayer__common__ttl {
+   
+    color: #fff;
+    margin:0 auto;
+}
+
+.underlayer__common__subttl {
+    margin-top:15px;
+    text-align: center;
+
+}
+
+.top__send {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    margin: 0 20px;
+    margin-top: 7px;
+
+}
+
+.home__send {}
+
+.home__send a, .send-2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.send__arrow {
+    width: 2.3px;
+    margin: 0 13px
+}
+
 @media screen and (min-width:768px) {
     .br__sp {
         display: none;
@@ -479,26 +661,28 @@ width:33px;
         background-size: 1px 6px;
         background-position: right bottom;
         background-repeat: repeat-y;
-        height: 61.3px;
+        /* height: 61.3px; */
         width: 59.15%;
         margin-right: 2.4%;
         margin-left: 3.2%;
     }
 
     .header__pc__nav li {
-       /*  background-image: linear-gradient(to bottom, #000, #000 1px, transparent 1px, transparent 8px);
+        /*  background-image: linear-gradient(to bottom, #000, #000 1px, transparent 1px, transparent 8px);
         background-size: 1px 6px;
         background-position: left bottom;
         background-repeat: repeat-y; */
         text-align: center;
         width: 100%;
         height: 69.3px;
-        
+        padding-top:11px;
+
 
     }
 
-    .header__pc__nav .active{
-        border-bottom:5px solid #f08300;
+    .header__pc__nav .active {
+        border-bottom: 5px solid #f08300;
+        padding-bottom:65px;
     }
 
     .header__pc__nav li a {
@@ -513,7 +697,7 @@ width:33px;
         background-position: left bottom;
         background-repeat: repeat-y;
         display: block;
-        height:61px;
+        height: 61px;
     }
 
     .header__pc__icon {
@@ -531,28 +715,32 @@ width:33px;
         position: relative;
     }
 
-    .header__pc__nav__img{
-        height:38px;
+    .header__pc__nav__img {
+        height: 38px;
     }
 
-    .header__pc__nav li:nth-child(1) .header__pc__nav__img img{
-        width:31px;
+    .header__pc__nav li:nth-child(1) .header__pc__nav__img img {
+        width: 31px;
         margin: 0 auto;
     }
-    .header__pc__nav li:nth-child(2) .header__pc__nav__img img{
-        width:50.5px;
+
+    .header__pc__nav li:nth-child(2) .header__pc__nav__img img {
+        width: 50.5px;
         margin: 0 auto;
     }
-    .header__pc__nav li:nth-child(3) .header__pc__nav__img img{
-        width:26.2px;
+
+    .header__pc__nav li:nth-child(3) .header__pc__nav__img img {
+        width: 26.2px;
         margin: 0 auto;
     }
-    .header__pc__nav li:nth-child(4) .header__pc__nav__img img{
-        width:34.6px;
+
+    .header__pc__nav li:nth-child(4) .header__pc__nav__img img {
+        width: 34.6px;
         margin: 0 auto;
     }
-    .header__pc__nav li:nth-child(5) .header__pc__nav__img img{
-        width:54px;
+
+    .header__pc__nav li:nth-child(5) .header__pc__nav__img img {
+        width: 54px;
         margin: 0 auto;
     }
 
@@ -565,10 +753,10 @@ width:33px;
 
     #form4 {
         position: relative;
-    width: 132px;
-    height: 26px;
-    border: 2px solid #3e0005;
-    margin-left: 26px;
+        width: 132px;
+        height: 26px;
+        border: 2px solid #3e0005;
+        margin-left: 26px;
     }
 
     #sbox4 {
@@ -596,13 +784,142 @@ width:33px;
 
     #sbtn4 .fa-search {
         font-size: 16px;
-    position: absolute;
-    top: 16%;
-    left: 14%;
+        position: absolute;
+        top: 16%;
+        left: 14%;
     }
 
     #sbtn4:hover {
         color: #888;
+    }
+
+
+    /* .fa-search:before {
+        content: "\f002";
+    } */
+
+
+
+    /* フッター */
+    .footer__wrap {
+        padding-top: 30px;
+        display: flex;
+        width: 656px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 94px;
+    }
+
+    .footer__nav__list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 450px;
+        margin: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+
+    }
+
+    .footer__logo {
+        width: 152px;
+        margin: 0;
+    }
+
+    .footer__nav__list li:not(:nth-last-child(-n+3)) {
+        margin-bottom: 27px;
+    }
+
+    .footer__nav__list li:not(:nth-child(3n)) {
+        margin-right: 4.5%;
+    }
+
+    .footer__nav__list li {
+        width: 30%;
+        font-size: 14px;
+    }
+
+    .footer__nav__u-sns__wrap {
+        text-align: center;
+        display: flex;
+        max-width: 900px;
+        margin: 0 auto;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+    }
+
+    .footer__nav__u__list {
+        display: flex;
+        text-align: left;
+        width: 446px;
+        margin-left: 70px;
+    }
+
+    .footer__nav__u__list li {
+        list-style: none;
+
+        font-size: 12px;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer__nav__u__list li:not(:last-child) {
+        margin-right: 8px;
+        margin-bottom: 0;
+    }
+
+    .footer__nav__u__list li:not(:last-child)::after {
+        /*  margin-bottom: 14px; */
+        content: "";
+        border-right: 1px solid black;
+        transform: rotate(47deg);
+        width: 2px;
+        height: 14px;
+        display: inline-block;
+        margin-left: 5px;
+        position: relative;
+        /*  top:3px; */
+
+    }
+
+    .footer__nav__u__list li:last-child {
+        padding: 4px;
+    }
+
+    .footer__sns__list {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        align-items: center;
+    }
+
+    /* 共通部分 */
+
+    .underlayer__common {
+        background-color: #b60005;
+        padding-top: 30px;
+        padding-bottom: 26px;
+    }
+    .underlayer__common__subttl {
+        margin-top: 23.5px;
+    }
+
+    .slider__list02__wrap {
+        max-width:900px;
+        margin: 0 auto;
+        width:84%;
+    }
+
+    .slider__list02 {
+        max-width: 790px;
+        margin: 0 auto;
+    }
+
+    .slider__list02 li {
+        margin: 0 0.6%;
+        width:30%
     }
 
 }

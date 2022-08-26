@@ -14,7 +14,7 @@ body {
 
 body {
     /* background-color: #000; */
-    font-family: 'industry';
+   /*  font-family: 'industry'; */
 
 }
 
@@ -612,6 +612,7 @@ body {
         background: linear-gradient(180deg, #fff 0%, #fff 46%, #b60005 46%, #b60005 100%);
         padding: 0;
         padding-bottom: 46.5px;
+        padding-top:43px;
     }
 
     .ranking__ttl {
@@ -686,7 +687,7 @@ body {
     }
 
 
-    .slider__list02__wrap {
+    /* .slider__list02__wrap {
         max-width:900px;
         margin: 0 auto;
         width:84%;
@@ -700,7 +701,7 @@ body {
     .slider__list02 li {
         margin: 0 0.6%;
         width:30%
-    }
+    } */
 
     
 }
