@@ -111,6 +111,60 @@
 }
 
 
+.pickup__list .slick-slider{
+    
+    max-width: 758px;
+    margin: 0 auto;
+}
+
+.pickup__list .slick-arrow:before{
+    content:""!important;
+    width: 100%!important;
+    height: 100%!important;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    z-index: 100000000 !important;
+  }
+
+  .pickup__list .slick-next:before{
+    background: url(../img/top/arrow_r02.svg)!important;
+    background-size: contain!important;
+    width:30.4px !important;
+    height:117.7px !important;
+    background-repeat: no-repeat  !important;
+    
+  }
+
+  .pickup__list .slick-prev:before{
+    background: url(../img/top/arrow_l02.svg)!important;
+    background-size: contain!important;
+    width:30.4px !important;
+    height:117.7px !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .pickup__list .slick-prev {
+    left: -50px  !important;
+}
+.pickup__list .slick-next {
+    right: -50px  !important;
+}
+.pickup__list .slick-next, .slick-prev{
+    top:30% !important;
+}
+
+
+.pickup__list .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden; 
+    margin: 0;
+    padding: 0;
+    
+}
+
+
 
 
 

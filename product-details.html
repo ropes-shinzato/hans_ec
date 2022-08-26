@@ -8,7 +8,7 @@
     <title>ハンズ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/productd-details.css">
+    <link rel="stylesheet" href="css/product-details.css">
     <link rel="stylesheet" href="css/slider.css">
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -265,40 +265,116 @@
                 </div>
             </div>
         </div>
+        <div class="cart__btn__wrap">
+            <a href="">
+                <div class="cart__btn font__Hiragino">カートに入れる</div>
+            </a>
+        </div>
     </div>
-
-    <input type="text">
-    <div class="cart__btn__wrap">
-        <a href="">
-            <div class="cart__btn font__Hiragino">カートに入れる</div>
-        </a>
-    </div>
-    </div>
-
     <div class="productd-details__wrap__pc">
         <div class="productd-details__img__wrap">
-            <ul class="productd-details__img__list">
-                <li></li>
-                <li></li>
-                <li></li>
+            <ul id="slider" class="slide__img__list__slider">
+                <li><img src="img/image__img.png" alt=""></li>
+                <li><img src="img/image__img.png" alt=""></li>
+                <li><img src="img/image__img.png" alt=""></li>
+                <li><img src="img/image__img.png" alt=""></li>
+               
+            </ul>
+            <ul id="thumbs" class="slide__img__list__thumbs">
+                <li><img src="img/image__img.png" alt=""></li>
+                <li><img src="img/image__img.png" alt=""></li>
+                <li><img src="img/image__img.png" alt=""></li>
+                <li><img src="img/image__img.png" alt=""></li>
             </ul>
         </div>
         <div class="productd-details__txt__area">
-            <div class="productd-details__name"></div>
-            <div class="productd-details__info"></div>
-        </div>
+            <div class="productd-details__name">
+                商品名が入ります。商品名が入ります。
+            </div>
+            <div class="productd-details__plice"><span>¥0,000</span>（税込）</div>
+            <div class="productd-details__info">
+                商品説明が入ります。商品説明が入ります。商品説明が入ります。商品説明が入ります。商品説明が入ります。商品説明が入ります。商品説明が入ります。商品説明が入ります。商品説明が入ります。商品説明が入ります。商品説明が入ります。商品説明が入ります。商品説明が入ります。商品説明が入ります。
+            </div>
 
+            <!-- <div class="productd-details__img__wrap">
+            <ul class="productd-details__img__list">
+                <li><img src="img/image__img.png" alt=""></li>
+                <li><img src="img/image__img.png" alt=""></li>
+                <li><img src="img/image__img.png" alt=""></li>
+
+            </ul>
+        </div> -->
+            <!--
         <div class="productd-details__purchase">
-            <div class="purchase__radio"><input type="text"></div>
+            <div class="purchase__radio"><input type="radio"></div>
             <div class="purchase__select"><select name="" id=""></select></div>
             <div class="purchase__num-select"><select name="" id=""></select></div>
             <div class="purchase__cert__btn__wrap">
                 <a href="">
-                    <div class="purchase__cert__btn"></div>
+                    <div class="purchase__cert__btn">カートに入れる</div>
+                </a>
+            </div>
+        </div> -->
+            <div class="productd-details__purchase">
+                <div class="seibetu">
+                    <div class="seibetu__ttl">
+                        テキストテキスト
+                    </div>
+                    <div class="seibetu__radio__wrap">
+                        <label class="one">
+                            有
+                            <input type="radio" name="custom" value="">
+                            <span class="two"></span>
+                        </label>
+                        <label class="one">
+                            無
+                            <input type="radio" name="custom" value="">
+                            <span class="two"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group02">
+                    <label class="form__name02" for="qty">テキスト</label>
+                    <div class="form__input quantity02">
+                        <select id="qty" name="qty" title="色">
+                            <option value="1">---</option>
+                        </select>
+
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="form__name" for="qty">数量</label>
+                    <div class="form__input quantity">
+
+                        <select id="qty" name="qty" title="個数">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cart__btn__wrap">
+                <a href="">
+                    <div class="cart__btn font__Hiragino">カートに入れる</div>
                 </a>
             </div>
         </div>
     </div>
+
+
+
 
     <div class="productd-details__details">
         テキスト：テキストテキスト<br>
@@ -308,6 +384,118 @@
         テキストテキストテキストテキストテキストテキスト<br>
         テキストテキストテキストテキストテキストテキスト
     </div>
+
+
+
+    <section class="pickup">
+        <h2 class="pickup__ttl">
+            <img src="img/product-details/pickup__ttl-sp.svg" alt="" class="switch">
+            <div class="subttl">おすすめ商品</div>
+        </h2>
+        <div class="pickup__list__wrap">
+            <ul class="pickup__list">
+                <li>
+                    
+                    <div class="pickup__img">
+                        <img src="img/image__img.png" alt="">
+                    </div>
+
+                    <div class="pickup__txt__area">
+                        <div class="pickup__txt">テキストテキストテキストテキストテキストテキスト</div>
+                        <div class="pickup__plice"><span>¥0,000</span>（税込）</div>
+                    </div>
+                </li>
+                <li>
+                    
+                    <div class="pickup__img">
+                        <img src="img/image__img.png" alt="">
+                    </div>
+
+                    <div class="pickup__txt__area">
+                        <div class="pickup__txt">テキストテキストテキストテキストテキストテキスト</div>
+                        <div class="pickup__plice"><span>¥0,000</span>（税込）</div>
+                    </div>
+                </li>
+                <li>
+                    
+                    <div class="pickup__img">
+                        <img src="img/image__img.png" alt="">
+                    </div>
+
+                    <div class="pickup__txt__area">
+                        <div class="pickup__txt">テキストテキストテキストテキストテキストテキスト</div>
+                        <div class="pickup__plice"><span>¥0,000</span>（税込）</div>
+                    </div>
+                </li>
+                <li>
+                    
+                    <div class="pickup__img">
+                        <img src="img/image__img.png" alt="">
+                    </div>
+
+                    <div class="pickup__txt__area">
+                        <div class="pickup__txt">テキストテキストテキストテキストテキストテキスト</div>
+                        <div class="pickup__plice"><span>¥0,000</span>（税込）</div>
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
+    </section>
+
+    <section class="common__shoppingguide">
+        <h2 class="common__shoppingguide__ttl">
+            <img src="img/shoppingguide__ttl.svg" alt="">
+            <div class="subttl">ご利用ガイド</div>
+        </h2>
+        <div class="common__shoppingguide__img"><img src="img/shoppingguide__img-sp.svg" alt="" class="switch"></div>
+        <div class="common__shoppingguide__btn__wrap common__btn__wrap">
+            <a href="">
+                <div class="common__shoppingguide__btn common__btn">詳しく見る</div>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="common__news">
+        <h2 class="common__news__ttl">
+            <img src="img/common__news__ttl.svg" alt="">
+            <div class="subttl">お知らせ</div>
+        </h2>
+        <div class="slider__list02__wrap">
+            <ul class="slider__list02">
+                <li>
+                    <div class="slider__list02__img"><img src="img/slider__list02__img01.png" alt=""></div>
+                    <div class="slider__list02__txt__area">
+                        <time>2022.07.02</time>
+                        <div class="slider__list02__txt">奇跡の1マイル店リニューアルオープン</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider__list02__img"><img src="img/slider__list02__img03.png" alt=""></div>
+                    <div class="slider__list02__txt__area">
+                        <time>2022.00.00</time>
+                        <div class="slider__list02__txt">毎月28日に抽選でランチ無料券をプレゼント</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider__list02__img"><img src="img/slider__list02__img02.png" alt=""></div>
+                    <div class="slider__list02__txt__area">
+                        <time>2022.00.00</time>
+                        <div class="slider__list02__txt">オンラインショップオープンしました。</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider__list02__img"><img src="img/slider__list02__img02.png" alt=""></div>
+                    <div class="slider__list02__txt__area">
+                        <time>2022.00.00</time>
+                        <div class="slider__list02__txt">オンラインショップオープンしました。</div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
 
 
 
